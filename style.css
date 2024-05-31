@@ -1,12 +1,12 @@
 body {
     box-sizing: border-box;
-    background-color: rgb(213, 249, 249);
+    background-color: rgb(2, 51, 51);
 }
 
 .header {
     font-family: "Times New Roman";
     font-weight: 700;
-    color: rgb(18, 156, 156);
+    color: rgb(215, 222, 14);
     text-align: center;
     font-size: 45px;
     padding: 20px;
@@ -25,15 +25,22 @@ body {
 }
 
 .square {
-    height: 30px;
-    width: 30px;
     border: 1px solid black;
     background-color: antiquewhite;
 }
 
-.container .square:nth-child(16n + 1) {
+.special {
     width: 100%;
     width: 0;
     height: 0;
     border: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 2px;
+    background-color: rgb(2, 51, 51);
+    justify-content: center;
+    padding-bottom: 20px;
 }
