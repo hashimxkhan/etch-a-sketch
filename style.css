@@ -1,0 +1,39 @@
+body {
+    box-sizing: border-box;
+    background-color: rgb(213, 249, 249);
+}
+
+.header {
+    font-family: "Times New Roman";
+    font-weight: 700;
+    color: rgb(18, 156, 156);
+    text-align: center;
+    font-size: 45px;
+    padding: 20px;
+    padding-bottom: 60px;
+}
+
+.container {
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   height: 512px;
+   width: 512px; 
+}
+
+.square {
+    height: 30px;
+    width: 30px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+.container .square:nth-child(16n + 1) {
+    width: 100%;
+    width: 0;
+    height: 0;
+    border: 0;
+}
