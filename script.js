@@ -1,7 +1,7 @@
 const container = document.querySelector(".container")
-hovColor = "blue"
 let val = 16
-function squares(num, hovColor) {
+
+function squares(num) {
     let dimension = (550 / num) - 2
     for (let i = 1; i <= (num ** 2 + num + 1); i++) {
         const square = document.createElement("div")
@@ -15,11 +15,12 @@ function squares(num, hovColor) {
         }
         container.appendChild(square) 
         square.addEventListener("mouseenter", function() {
-            square.style.backgroundColor = hovColor
+            square.style.backgroundColor = "blue"
         })
     }
 }
-squares(val, hovColor) 
+
+squares(val)
 
 const buttons = document.querySelector(".buttons")
 const size = document.createElement("button")
@@ -30,17 +31,27 @@ rgb.className = "btn"
 rgb.textContent = "RGB Generator"
 buttons.appendChild(rgb)
 size.className = "btn"
+const clear = document.createElement("button")
+clear.textContent = "Clear Grid"
+clear.className = "btn"
+buttons.appendChild(clear)
+
+clear.addEventListener("click", function() {
+    container.innerHTML = ''
+    squares(val)
+})
 
 size.addEventListener("click", function() { 
      val =  prompt("Enter your preferred grid size (10-100)")
      val = parseInt(val)
      container.innerHTML = ''
-     squares(val, hovColor)
+     squares(val)
 })
 
 rgb.addEventListener("click", function() {
     container.innerHTML = ''
     rgbSquares(val)
+    
 })
 
 function randomColor() {
