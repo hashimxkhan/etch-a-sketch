@@ -6,5 +6,6 @@ Resizable Grid: Users can dynamically change the size of the grid to their prefe
 Random RGB Coloring: Each square in the grid gets a random color when the mouse enters it.  
 Clear Grid Button: A button to clear the grid and reset the colors of all squares.  
 ## Installation
-To run this project, simply download or clone the repository and open the index.html file in your web browser.
+To run this project on your local machine, download or clone the repository and open the index.html file in your web browser.  
+To access this project remotely, simply click this link: https://hashimxkhan.github.io/etch-a-sketch/
 
